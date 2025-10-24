@@ -21,3 +21,72 @@ section {
   border-radius:5px;
   margin:10px;
 }
+
+.botones{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+button {
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius:5px;
+  cursor: pointer;
+  background: #666;
+  color: white;
+  padding:20px;
+  margin-bottom:5px;
+}
+
+.holographic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  background: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+.holographic-card {
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+
+.holographic-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent 30%,
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.holographic-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,255,255,0.5);
+}
+
+.holographic-card:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
