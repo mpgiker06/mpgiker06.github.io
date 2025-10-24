@@ -3,10 +3,21 @@ header {
   color: white;
   text-align:center;
   padding: 20px;
+  margin:0;
   width:100%;
   font-family: arial, sans-serif;
 }
 
-main {
+body {
+  align-items:center;
+  margin:0;
+  font-family:arial,sans-serif;
   background: #857069;
+}
+
+section {
+  padding:15px;
+  background: #D4EAFF;
+  border-radius:5px;
+  margin:10px;
 }
